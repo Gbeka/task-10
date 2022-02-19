@@ -6,7 +6,7 @@ class Cars {
       this.color = color;
     }
    showInfo(){
-     return `Brand of car: ${this.brand}, Year of manufacture: ${this.year}, Engine power: ${this.enginePower}, Car color: ${this.color}`
+     return `Марка: ${this.brand}, год выпуска: ${this.year}, мощность: ${this.enginePower}, цвет: ${this.color}`
    } 
   
   }
@@ -16,18 +16,18 @@ class Cars {
       this.battery = battery;
     }
     showInfo(){
-     return super.showInfo() + ' Battery: '   +  this.battery;
+     return super.showInfo() + ' Аккумулятор '   +  this.battery;
     }  
   
     promote(){
-      return `Buy our brand-new limited edition electro car model, and feel on par with Elon Musk. Characteristics of the electro car: ${this.showInfo()}`
+      return `Покупайте электромобили с характеристикой: ${this.showInfo()}`
     }
   
   }
-  const hesla = new Cars('Hesla', '2022', ' 310 kW', 'Black');
-  console.log(hesla.showInfo());
+  const auto = new Cars('Мерседес', '2010', ' 400 кВт', 'белый');
+  console.log(auto.showInfo());
   
-  const electroHesla = new ElectroCars('Hesla', '2022', ' 310 kW', 'Black', '100 kWh');
-  console.log(electroHesla.showInfo());
+  const electroM = new ElectroCars('Lion', '2022', ' 200 кВт', 'серый', '100 кВт');
+  console.log(electroM.showInfo());
   
-  console.log(electroHesla.promote());
+  console.log(electroM.promote());
